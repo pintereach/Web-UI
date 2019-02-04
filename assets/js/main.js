@@ -104,6 +104,12 @@
 
 		// Events.
 
+		//-----------------------------------------------------------------------Pintereach edit
+		document.querySelector('.posts').addEventListener("click", function(event) {
+			event.preventDefault();
+		});
+		//-----------------------------------------------------------------------Pintereach edit
+
 			// Link clicks.
 				$sidebar.on('click', 'a', function(event) {
 
