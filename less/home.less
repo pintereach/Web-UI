@@ -39,6 +39,8 @@
 };
 
 #main .inner section {
+    border-top: solid 2px rgba(210, 215, 217, 0.75);
+    padding: 40px 0 40px 0;
    
     header {
         margin: 0;
@@ -63,30 +65,84 @@
     };
 
     .features {
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
-    -moz-flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin: 0 0 2em -3em;
-    width: calc(100% + 3em);
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        -moz-flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin: 0 0 2em -3em;
+        width: calc(100% + 3em);
+
+        @media @desktop {
+            margin: 0 0 2em 0;
+            width: 100%;
+            flex-direction: column;
+        }; 
+
+        article {
+        -moz-align-items: center;
+        -webkit-align-items: center;
+        -ms-align-items: center;
+        align-items: center;
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        margin: 0 0 3em 3em;
+        position: relative;
+        width: calc(50% - 3em);
+        
+
+        @media @desktop {
+            margin-right: 0;
+            width: 98%;
+        };
+
+            .icon {
+                text-decoration: none;
+                border-bottom: none;
+                position: relative;
+                flex-grow: 0;
+                -moz-flex-shrink: 0;
+                -webkit-flex-shrink: 0;
+                -ms-flex-shrink: 0;
+                flex-shrink: 0;
+                display: block;
+                height: 10em;
+                line-height: 10em;
+                margin: 0 2em 0 0;
+                text-align: center;
+                width: 10em;
+            };
+            .content {
+                flex-grow: 1;
+                flex-shrink: 1;
+                width: 100%;
+
+                h3 {
+                    font-size: 20px;
+                    color: #3d4449;
+                    font-family: "Roboto Slab", serif;
+                    font-weight: 700;
+                    line-height: 1.5;
+                    margin: 0 0 1em 0;
+                };
+                p {
+                    margin-bottom: 0;
+                    margin: 0 0 2em 0;
+                };
+            };
+        };
     };
-    
-    article {
-    -moz-align-items: center;
-    -webkit-align-items: center;
-    -ms-align-items: center;
-    align-items: center;
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
-    margin: 0 0 3em 3em;
-    position: relative;
-    width: calc(50% - 3em);
+
+    .posts {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 0 2em -10px;
+        width: calc(100% + 10px);
     };
 };
     
