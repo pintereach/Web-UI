@@ -141,14 +141,86 @@ body {
   padding: 0;
 }
 body {
-  display: flex;
-  justify-content: none;
-  align-items: center;
-  flex-direction: column;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "Roboto Slab", serif;
+  color: #7f888f;
 }
 .inner {
   padding: 0 53px 0 53px;
+}
+.banner {
+  display: flex;
+  vertical-align: baseline;
+  padding-top: 53px;
+  padding-bottom: 27px;
+}
+.banner .content {
+  width: 45%;
+}
+.banner .content header p {
+  font-family: "Roboto Slab", serif;
+  margin-bottom: 27px;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1.65;
+}
+.banner h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 24px;
+  color: #3d4449;
+}
+.banner span {
+  width: 580px;
+  margin-left: 53px;
+}
+.banner img {
+  width: 100%;
+  height: 403px;
+}
+#main .inner section header {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+#main .inner section header h2 {
+  font-size: 25px;
+  color: #3d4449;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0 0 1em 0;
+  border-bottom: solid 3px #f56a6a;
+  display: inline-block;
+  margin: 0 0 2em 0;
+  padding: 0 0.75em 0.5em 0;
+}
+#main .inner section .features {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 0 2em -3em;
+  width: calc(100% + 3em);
+}
+#main .inner section article {
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  margin: 0 0 3em 3em;
+  position: relative;
+  width: calc(50% - 3em);
 }
 .header {
   display: -moz-flex;
@@ -157,10 +229,13 @@ body {
   display: flex;
   border-bottom: solid 5px #f56a6a;
   position: relative;
-  width: 1158px;
+  width: 100%;
   height: 111px;
   padding-top: 66px;
   padding-bottom: 13px;
+}
+.header h1 {
+  color: #3d4449;
 }
 @media (max-width: 500px) {
   .header {
