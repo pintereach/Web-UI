@@ -41,6 +41,10 @@
 #main .inner section {
     border-top: solid 2px rgba(210, 215, 217, 0.75);
     padding: 40px 0 40px 0;
+
+    @media @desktop {
+        padding: 15px 0 5px 0;
+    };
    
     header {
         margin: 0;
@@ -77,7 +81,7 @@
         width: calc(100% + 3em);
 
         @media @desktop {
-            margin: 0 0 2em 0;
+            margin: 0 0 10px 0;
             width: 100%;
             flex-direction: column;
         }; 
@@ -91,14 +95,19 @@
         display: -webkit-flex;
         display: -ms-flex;
         display: flex;
-        margin: 0 0 3em 3em;
+        margin: 0 0 15px 15px;
         position: relative;
-        width: calc(50% - 3em);
+        width: calc(50% - 15px);
         
 
         @media @desktop {
             margin-right: 0;
             width: 98%;
+        };
+        @media @mobile {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 0;
         };
 
             .icon {
@@ -116,6 +125,18 @@
                 margin: 0 2em 0 0;
                 text-align: center;
                 width: 10em;
+
+                @media @desktop {
+                    height: 40px;
+                    line-height: 40px;
+                    width: 40px;
+                };
+                @media @mobile {
+                    height: 30px;
+                    line-height: 30px;
+                    margin: 0 0 5px 0;
+                    width: 30px;
+                };
             };
             .content {
                 flex-grow: 1;
@@ -143,6 +164,49 @@
         flex-wrap: wrap;
         margin: 0 0 2em -10px;
         width: calc(100% + 10px);
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+
+        article {
+            width: calc(50% - 10px);
+            flex-grow: 0;
+            flex-shrink: 1;
+            margin: 0 0 10px 10px;
+            position: relative;
+            //width: calc(33.3333333333% - 6em);
+
+            .image {
+                display: block;
+                margin: 0 0 2em 0;
+                border-radius: 0.375em;
+                border: 0;
+                position: relative;
+                
+                a {
+                    overflow: hidden;
+                    
+                    img {
+                    border-radius: 0.375em;
+                    transition: transform 0.2s ease;
+                    display: block;
+                    width: 100%;
+                    };
+                };
+            };
+            h3 {
+                    font-size: 1.25em;
+                    color: #3d4449;
+                    font-family: "Roboto Slab", serif;
+                    font-weight: 700;
+                    line-height: 1.5;
+                    margin: 0 0 1em 0;
+                };
+
+
+        };
     };
 };
     

@@ -1,17 +1,21 @@
-.header {
+#header {
     display: -moz-flex;
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     border-bottom: solid 5px #f56a6a;
+    padding: 30px 0 5px 0;
     position: relative;
-    width: 100%;
-    //width: 1158px;
-    height: 111px;
-    padding-top: 66px;
-    padding-bottom: 13px;
+    @media @desktop {
+        padding-top: 35px;
+    };
     h1 {
         color: @h-color;
+        border-bottom: 0;
+        @media @desktop {
+            margin: 0;
+            font-size: 1.25em;
+        };
     };
     
     

@@ -143,9 +143,29 @@ body {
 body {
   font-family: "Roboto Slab", serif;
   color: #7f888f;
+  line-height: 1;
 }
-.inner {
-  padding: 0 53px 0 53px;
+#wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  min-height: 100vh;
+}
+#main {
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 100%;
+}
+#main .inner {
+  padding: 0 70px 0.1em 70px;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+@media (max-width: 1000px) {
+  #main .inner {
+    padding: 0 20px 0.1em 20px;
+  }
 }
 .banner {
   display: flex;
@@ -181,6 +201,11 @@ body {
   border-top: solid 2px rgba(210, 215, 217, 0.75);
   padding: 40px 0 40px 0;
 }
+@media (max-width: 1000px) {
+  #main .inner section {
+    padding: 15px 0 5px 0;
+  }
+}
 #main .inner section header {
   margin: 0;
   padding: 0;
@@ -215,7 +240,7 @@ body {
 }
 @media (max-width: 1000px) {
   #main .inner section .features {
-    margin: 0 0 2em 0;
+    margin: 0 0 10px 0;
     width: 100%;
     flex-direction: column;
   }
@@ -229,14 +254,21 @@ body {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  margin: 0 0 3em 3em;
+  margin: 0 0 15px 15px;
   position: relative;
-  width: calc(50% - 3em);
+  width: calc(50% - 15px);
 }
 @media (max-width: 1000px) {
   #main .inner section .features article {
     margin-right: 0;
     width: 98%;
+  }
+}
+@media (max-width: 500px) {
+  #main .inner section .features article {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
   }
 }
 #main .inner section .features article .icon {
@@ -254,6 +286,21 @@ body {
   margin: 0 2em 0 0;
   text-align: center;
   width: 10em;
+}
+@media (max-width: 1000px) {
+  #main .inner section .features article .icon {
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+  }
+}
+@media (max-width: 500px) {
+  #main .inner section .features article .icon {
+    height: 30px;
+    line-height: 30px;
+    margin: 0 0 5px 0;
+    width: 30px;
+  }
 }
 #main .inner section .features article .content {
   flex-grow: 1;
@@ -277,24 +324,69 @@ body {
   flex-wrap: wrap;
   margin: 0 0 2em -10px;
   width: calc(100% + 10px);
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
-.header {
+#main .inner section .posts article {
+  width: calc(50% - 10px);
+  flex-grow: 0;
+  flex-shrink: 1;
+  margin: 0 0 10px 10px;
+  position: relative;
+}
+#main .inner section .posts article .image {
+  display: block;
+  margin: 0 0 2em 0;
+  border-radius: 0.375em;
+  border: 0;
+  position: relative;
+}
+#main .inner section .posts article .image a {
+  overflow: hidden;
+}
+#main .inner section .posts article .image a img {
+  border-radius: 0.375em;
+  transition: transform 0.2s ease;
+  display: block;
+  width: 100%;
+}
+#main .inner section .posts article h3 {
+  font-size: 1.25em;
+  color: #3d4449;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0 0 1em 0;
+}
+#header {
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
   border-bottom: solid 5px #f56a6a;
+  padding: 30px 0 5px 0;
   position: relative;
-  width: 100%;
-  height: 111px;
-  padding-top: 66px;
-  padding-bottom: 13px;
 }
-.header h1 {
+@media (max-width: 1000px) {
+  #header {
+    padding-top: 35px;
+  }
+}
+#header h1 {
   color: #3d4449;
+  border-bottom: 0;
+}
+@media (max-width: 1000px) {
+  #header h1 {
+    margin: 0;
+    font-size: 1.25em;
+  }
 }
 @media (max-width: 500px) {
-  .header {
+  #header {
     margin: 0 auto;
     flex-direction: row;
     width: 100%;
@@ -305,7 +397,7 @@ body {
     padding-right: 45px;
   }
 }
-.header a {
+#header a {
   text-decoration: none;
   text-decoration-color: black;
   font-size: 18px;

@@ -10,8 +10,32 @@ html, body {
 body {
   font-family: "Roboto Slab", serif;
   color: @font-color;
+  line-height: 1;
 }
 
-.inner {
-  padding: 0 53px 0 53px;
-}
+
+
+#wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  min-height: 100vh;
+};
+
+#main {
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 100%;
+  
+  .inner {
+    padding: 0 70px 0.1em 70px;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  
+    @media @desktop {
+    padding: 0 20px 0.1em 20px;
+    };
+  };
+};
+
