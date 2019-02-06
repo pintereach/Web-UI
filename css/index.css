@@ -460,11 +460,12 @@ nav {
 #main .inner section .posts article .image a {
   overflow: hidden;
 }
-#main .inner section .posts article .image a img {
+#main .inner section .posts article .image img {
   border-radius: 0.375em;
   transition: transform 0.2s ease;
   display: block;
-  width: 100%;
+  width: 535px;
+  height: 330px;
 }
 #main .inner section .posts article h3 {
   font-size: 1.25em;
