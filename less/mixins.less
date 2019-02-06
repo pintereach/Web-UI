@@ -12,3 +12,17 @@
   align-items: @ai;
   flex-direction: @dir;
 }
+
+.custom-btn(@width: 300px, @height: 200px, @bgcolor: white, @font-color: black) {
+  width: @width;
+  height: @height;
+  background-color: @bgcolor;
+  color: @font-color;
+  border: 1px solid black;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: @font-color;
+    color: @bgcolor;
+  }
+}

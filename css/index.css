@@ -262,6 +262,18 @@ nav {
   padding-top: 53px;
   padding-bottom: 27px;
 }
+.banner .button {
+  width: 300px;
+  height: 200px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.banner .button:hover {
+  background-color: black;
+  color: white;
+}
 .banner .content {
   width: 45%;
 }
@@ -487,6 +499,8 @@ nav {
   cursor: pointer;
   max-width: 100px;
   max-height: 100px;
+  padding-bottom: 30px;
+  padding-right: 50px;
 }
 .menu {
   display: none;
@@ -499,7 +513,6 @@ nav {
   border-left: none;
   border-bottom: none;
   z-index: 2;
-  /* This set the layer level of the element, it has precendence over initial level of 1*/
 }
 .menu ul li {
   list-style-type: none;
@@ -522,6 +535,7 @@ nav {
 @media (max-width: 1000px) {
   #header {
     padding-top: 35px;
+    padding-bottom: 35px;
   }
 }
 #header h1 {
