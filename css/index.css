@@ -391,6 +391,10 @@ nav {
     width: 30px;
   }
 }
+#main .inner section .features article .icon img {
+  width: 100px;
+  height: 100px;
+}
 #main .inner section .features article .content {
   flex-grow: 1;
   flex-shrink: 1;
