@@ -135,6 +135,18 @@ table {
 * {
   box-sizing: border-box;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #3d4449;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0 0 1em 0;
+}
 html,
 body {
   margin: 0;
@@ -144,6 +156,20 @@ body {
   font-family: "Roboto Slab", serif;
   color: #7f888f;
   line-height: 1;
+}
+div,
+nav,
+header {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+header,
+nav {
+  display: block;
 }
 #wrapper {
   display: flex;
@@ -166,6 +192,69 @@ body {
   #main .inner {
     padding: 0 20px 0.1em 20px;
   }
+}
+#sidebar {
+  -moz-flex-grow: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-grow: 0;
+  flex-grow: 0;
+  -moz-flex-shrink: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  -moz-transition: margin-left 0.5s ease, box-shadow 0.5s ease;
+  -webkit-transition: margin-left 0.5s ease, box-shadow 0.5s ease;
+  -ms-transition: margin-left 0.5s ease, box-shadow 0.5s ease;
+  transition: margin-left 0.5s ease, box-shadow 0.5s ease;
+  background-color: #f5f6f7;
+  font-size: 0.9em;
+  position: relative;
+  width: 325px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+#sidebar .inner {
+  padding: 2em 2em 2em 2em;
+}
+#sidebar .inner #menu {
+  border-bottom: solid 2px rgba(210, 215, 217, 0.75);
+  margin: 0 0 3.5em 0;
+  padding: 0 0 3.5em 0;
+}
+#sidebar .inner #menu .major h2 {
+  font-size: 1.38888889em;
+  border-bottom: solid 3px #f56a6a;
+  display: inline-block;
+  margin: 0 0 2em 0;
+  padding: 0 0.75em 0.5em 0;
+}
+#sidebar .inner #menu ul {
+  margin: 0 0 2em 0;
+  user-select: none;
+  color: #3d4449;
+  font-family: "Roboto Slab", serif;
+  letter-spacing: 0.075em;
+  list-style: none;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+#sidebar .inner #menu ul li:first-child {
+  border-top: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
+#sidebar .inner #menu ul li {
+  border-top: solid 1px rgba(210, 215, 217, 0.75);
+  margin: 0.5em 0 0 0;
+  padding: 0.5em 0 0 0;
+}
+.inactive {
+  margin-left: -26em;
 }
 .banner {
   display: flex;
@@ -330,12 +419,36 @@ body {
   font: inherit;
   vertical-align: baseline;
 }
+@media (max-width: 800px) {
+  #main .inner section .posts {
+    margin: 0 0 10px -22px;
+    width: calc(100% + 22px);
+  }
+}
+@media (max-width: 500px) {
+  #main .inner section .posts {
+    margin: 0 0 1em 0;
+    width: 100%;
+  }
+}
 #main .inner section .posts article {
   width: calc(50% - 10px);
   flex-grow: 0;
   flex-shrink: 1;
   margin: 0 0 10px 10px;
   position: relative;
+}
+@media (max-width: 800px) {
+  #main .inner section .posts article {
+    margin: 0 0 3.5em 3.5em;
+    width: calc(50% - 3.5em);
+  }
+}
+@media (max-width: 500px) {
+  #main .inner section .posts article {
+    margin: 0 0 3.5em 0;
+    width: 100%;
+  }
 }
 #main .inner section .posts article .image {
   display: block;
