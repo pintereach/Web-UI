@@ -5,12 +5,55 @@
     padding-top: 53px;
     padding-bottom: 27px;
 
-    .button {
-        .custom-btn();
+    @media @tablet {
+        padding: 3em 0 1em 0;
     };
+    @media @mobile {
+        flex-direction: column-reverse; 
+    };
+    button {
+        .custom-btn;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        -ms-appearance: none;
+        appearance: none;
+        -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        background-color: transparent;
+        border-radius: 0.375em;
+        border: 0;
+        box-shadow: inset 0 0 0 2px #f56a6a;
+        color: #f56a6a !important;
+        cursor: pointer;
+        display: inline-block;
+        font-family: "Roboto Slab", serif;
+        font-size: 0.8em;
+        font-weight: 700;
+        height: 3.5em;
+        letter-spacing: 0.075em;
+        line-height: 3.5em;
+        padding: 0 2.25em;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        white-space: nowrap;
+        font-display: none;
+        a {
+            font-style: none;
+            text-decoration: none;
+            color:  #f56a6a;
+        };
+    };
+    
     
     .content {
         width: 45%;
+
+        @media @mobile {
+            width: 100%;
+        };
         
         header {
             
@@ -25,21 +68,33 @@
     };
     
     h1 {
-        font-size: 2.5em;
-        font-weight: bold;
+        font-size: 2em;
+        font-weight: 700;
+        line-height: 1.5;
+        margin: 0 0 1em 0;
         margin-bottom: 24px;
-
+        font-family: "Roboto Slab", serif;
         color: @h-color;
+
+        @media @tablet {
+            font-size: 1.5em;
+            line-height: 1.4;
+        };
     };
     span {
         width: 580px;
         margin-left: 53px;
+        
     };
     img {
        
         width: 100%;
         height: 403px;
         
+        @media @mobile {
+            display: none;
+
+        };
     };
 };
 
@@ -144,8 +199,10 @@
                 };
 
                 img {
-                    width: 100px;
+                    max-width: 100px;
+                    width: 100%;
                     height: 100px;
+                    max-height: 100%;
                 };
 
             };
