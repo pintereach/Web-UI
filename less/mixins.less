@@ -2,10 +2,6 @@
   width: 100%;
 }
 
-.border-bottom-grey {
-  border-bottom: 1px solid black;
-}
-
 .flex(@jc: none, @ai: none, @dir: row) {
   display: flex;
   justify-content: @jc;
@@ -13,12 +9,11 @@
   flex-direction: @dir;
 }
 
-.custom-btn(@width: 300px, @height: 200px, @bgcolor: white, @font-color: black) {
+.custom-btn(@width: 250px, @height: 100px, @bgcolor: white, @font-color: rgb(255, 72, 72)) {
   width: @width;
   height: @height;
   background-color: @bgcolor;
   color: @font-color;
-  border: 1px solid black;
   cursor: pointer;
   
   &:hover {
