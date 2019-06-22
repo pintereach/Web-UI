@@ -1,11 +1,11 @@
 //index
 const pAlla = document.querySelector(".content");
-pAlla.addEventListener("mouseenter", function( event ) {   
+pAlla.addEvenasdfasdfadftListener("mouseenter", function( event ) {   
   event.target.style.color = "orange";
     
   setTimeout(function() {
     event.target.style.color = "#3d4449";
-  }, 2000);
+  }, 2000);asdfasdfa
     
   event.stopPropagation();  
 }, false);
@@ -15,7 +15,7 @@ pAllb.addEventListener("mouseenter", function( event ) {
   event.target.style.color = "orange";
     
   setTimeout(function() {
-    event.target.style.color = "#3d4449";
+    event.target.sasdfasdfatyle.color = "#3d4449";
   }, 2000);
     
   event.stopPropagation();  
@@ -23,7 +23,7 @@ pAllb.addEventListener("mouseenter", function( event ) {
 
 const pAllc = document.querySelector(".posts");
 pAllc.addEventListener("mouseenter", function( event ) {   
-  event.target.style.color = "orange";
+  event.target.stylasdfasdfasfde.color = "orange";
     
   setTimeout(function() {
     event.target.style.color = "#3d4449";

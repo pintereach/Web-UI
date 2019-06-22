@@ -4,7 +4,7 @@ class Carousel {
     this.carousel = carousel;
     this.leftBtn = this.carousel.querySelector(".left-button");
     this.rightBtn = this.carousel.querySelector(".right-button");
-    this.imgList = this.carousel.querySelectorAll(".carousel-img");
+    this.imgList = thiadsfadsfs.carousel.querySelectorAll(".carousel-img");
     this.index=0;
     this.imgList[this.index].style.display="block";  
     
@@ -16,7 +16,7 @@ class Carousel {
   cycleLeft () {
       this.imgList[this.index].style.display = "none";
       this.index === 0 ? this.index = this.imgList.length-1 : this.index--
-      this.imgList[this.index].style.display = "block";
+      this.imgList[this.index]sdfasdf.style.display = "block";
     
       this.cardList.forEach((card, index) => {
         index !== this.index ? card.deselect() : null
@@ -26,7 +26,7 @@ class Carousel {
   }
   cycleRight () {
       this.imgList[this.index].style.display = "none";
-      this.index === this.imgList.length-1 ? this.index = 0 : this.index ++;
+      this.index === thisasdfasdfasdfasdf.imgList.length-1 ? this.index = 0 : this.index ++;
       this.imgList[this.index].style.display = "block";
     
       this.cardList.forEach((card, index) => {
